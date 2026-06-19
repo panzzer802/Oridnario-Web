@@ -1,4 +1,4 @@
-fetch("mongodb+srv://jaimitojamonsalchicha_db_user:9MgHbA3cCFRBW0p8@cluster0.yptw9d6.mongodb.net/?appName=Cluster0")
+fetch("https://ordinario-web.onrender.com/api/tareas")
 
 .then(res=>res.json())
 
