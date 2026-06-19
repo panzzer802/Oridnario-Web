@@ -1,0 +1,81 @@
+body{
+
+    font-family: Arial;
+
+    background:#f2f2f2;
+
+    margin:0;
+
+}
+
+header{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+section{
+
+    width:80%;
+
+    margin:auto;
+
+    margin-top:30px;
+
+}
+
+.datos{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 10px rgba(0,0,0,.2);
+
+}
+
+.tarjeta{
+
+    background:white;
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 10px rgba(0,0,0,.2);
+
+}
+
+a{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#198754;
+
+    color:white;
+
+    padding:10px 20px;
+
+    text-decoration:none;
+
+    border-radius:5px;
+
+}
+
+a:hover{
+
+    background:#157347;
+
+}
