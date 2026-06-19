@@ -1,4 +1,4 @@
-fetch("https://ordinario-web.onrender.com/api/tareas")
+fetch("https://oridnario-web-1.onrender.com/api/tareas")
 
 .then(res=>res.json())
 
