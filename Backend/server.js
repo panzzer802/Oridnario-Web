@@ -20,13 +20,8 @@ const tareaSchema = new mongoose.Schema({
 
 const Tarea = mongoose.model("Tarea", tareaSchema);
 
-app.get("/api/tareas", async (req, res) => {
-  try {
-    const tareas = await Tarea.find();
-    res.json(tareas);
-  } catch (error) {
-    res.status(500).json({ mensaje: "Error al obtener tareas" });
-  }
+app.get("/", (req, res) => {
+  res.send("API funcionando correctamente");
 });
 
 app.post("/api/tareas", async (req, res) => {

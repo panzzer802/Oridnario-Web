@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/api/tareas")
+fetch("mongodb+srv://jaimitojamonsalchicha_db_user:9MgHbA3cCFRBW0p8@cluster0.yptw9d6.mongodb.net/?appName=Cluster0")
 
 .then(res=>res.json())
 
