@@ -24,16 +24,16 @@ app.get("/", (req, res) => {
     res.send("API funcionando correctamente");
 });
 
-app.get("/api/tareas", async (req, res) => {
-    try {
-        const tareas = await Tarea.find();
-        res.json(tareas);
-    } catch (error) {
-        res.status(500).json({
-            mensaje: "Error al obtener tareas"
-        });
-    }
-});
+// app.get("/api/tareas", async (req, res) => {
+  //  try {
+   //     const tareas = await Tarea.find();
+  //      res.json(tareas);
+ //   } catch (error) {
+   //     res.status(500).json({
+   //         mensaje: "Error al obtener tareas"
+  //      });
+   // }
+//});
 
 app.post("/api/tareas", async (req, res) => {
     try {
@@ -50,6 +50,17 @@ app.post("/api/tareas", async (req, res) => {
         });
     }
 });
+
+app.get("/prueba", (req, res) => {
+    res.send("Ruta de prueba funcionando");
+});
+
+app.get("/api/tareas", (req, res) => {
+    res.json({
+        mensaje: "La ruta GET funciona"
+    });
+});
+
 
 const PORT = process.env.PORT || 3000;
 
