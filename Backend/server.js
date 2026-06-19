@@ -5,6 +5,8 @@ require("dotenv").config();
 
 const app = express();
 
+console.log("***** VERSION NUEVA DEL SERVIDOR *****");
+
 app.use(cors());
 app.use(express.json());
 
@@ -21,19 +23,24 @@ const tareaSchema = new mongoose.Schema({
 const Tarea = mongoose.model("Tarea", tareaSchema);
 
 app.get("/", (req, res) => {
-    res.send("API funcionando correctamente");
+    res.send("SERVIDOR NUEVO 18 JUNIO");
 });
 
-// app.get("/api/tareas", async (req, res) => {
-  //  try {
-   //     const tareas = await Tarea.find();
-  //      res.json(tareas);
- //   } catch (error) {
-   //     res.status(500).json({
-   //         mensaje: "Error al obtener tareas"
-  //      });
-   // }
-//});
+app.get("/prueba", (req, res) => {
+    res.send("Ruta de prueba funcionando");
+});
+
+app.get("/api/tareas", async (req, res) => {
+    try {
+        const tareas = await Tarea.find();
+        res.json(tareas);
+    } catch (error) {
+        res.status(500).json({
+            mensaje: "Error al obtener tareas",
+            error: error.message
+        });
+    }
+});
 
 app.post("/api/tareas", async (req, res) => {
     try {
@@ -46,21 +53,11 @@ app.post("/api/tareas", async (req, res) => {
         });
     } catch (error) {
         res.status(500).json({
-            mensaje: "Error al guardar la tarea"
+            mensaje: "Error al guardar la tarea",
+            error: error.message
         });
     }
 });
-
-app.get("/prueba", (req, res) => {
-    res.send("Ruta de prueba funcionando");
-});
-
-app.get("/api/tareas", (req, res) => {
-    res.json({
-        mensaje: "La ruta GET funciona"
-    });
-});
-
 
 const PORT = process.env.PORT || 3000;
 
