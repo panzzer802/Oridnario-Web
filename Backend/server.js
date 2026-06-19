@@ -51,13 +51,8 @@ app.post("/api/tareas", async (req, res) => {
     }
 });
 
-console.log("Rutas cargadas:");
-app._router.stack.forEach((r) => {
-    if (r.route && r.route.path) {
-        console.log(`${Object.keys(r.route.methods)} -> ${r.route.path}`);
-    }
-});
+const PORT = process.env.PORT || 3000;
 
-app.listen(process.env.PORT, () => {
-    console.log(`Servidor funcionando en http://localhost:${process.env.PORT}`);
+app.listen(PORT, () => {
+    console.log(`Servidor funcionando en el puerto ${PORT}`);
 });
